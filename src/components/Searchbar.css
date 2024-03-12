@@ -1,0 +1,20 @@
+.searchbar {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.textbox {
+  height: 2.5rem;
+  width: 40%;
+  text-align: center;
+  color: rgb(15, 15, 15);
+  border-radius: 1rem;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.647);
+  font-size: 18px;
+}
+.btn {
+  background-color: burlywood;
+  border-radius: 0.5rem;
+  font-size: 15px;
+}
