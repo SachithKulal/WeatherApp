@@ -11,10 +11,10 @@ class App extends Component {
       city: undefined,
       country: undefined,
       week: null,
-      temp: null,
-      max_temp: null,
-      min_temp: null,
-      humidity: null,
+      temp: 0,
+      max_temp: 0,
+      min_temp: 0,
+      humidity: 0,
       date: null,
     };
 
@@ -50,9 +50,9 @@ class App extends Component {
     this.setState({
       city: response.data.city.name,
       country: response.data.city.country,
-      temp: closestObject.main.temp,
-      max_temp: closestObject.main.temp_max,
-      min_temp: closestObject.main.temp_min,
+      temp: closestObject.main.temp - 273.15,
+      max_temp: closestObject.main.temp_max - 273.15,
+      min_temp: closestObject.main.temp_min - 273.15,
       humidity: closestObject.main.humidity,
       week: currentDayOfWeek,
       date: currentTime,

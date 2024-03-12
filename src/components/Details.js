@@ -17,20 +17,21 @@ const Details = (props) => {
           </h1>
           <h2>
             {props.city}
-            <h3>Temparature {props.temp}</h3>
+            <h3>Temperature {props.temp}°C</h3>{" "}
+            {/* Added .toFixed(2) to display temperature with 2 decimal places */}
           </h2>
         </div>
       </div>
       <div className="container2">
         <div className="box">
           Temperature
-          <h2>{props.temp}</h2>
+          <h2>{Math.round(props.temp)} °C</h2>
         </div>
         <div className="box">
-          Max Temp<h2>{props.max_temp}</h2>
+          Max Temp<h2>{Math.round(props.max_temp)} °C</h2>
         </div>
         <div className="box">
-          Min Temp<h2>{props.min_temp}</h2>
+          Min Temp<h2>{Math.round(props.min_temp)} °C</h2>
         </div>
         <div className="box">
           Humidity<h2>{props.humidity}</h2>
